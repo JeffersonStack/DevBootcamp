@@ -1,0 +1,16 @@
+/* CSS */
+body {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+
+.is-imagem {
+  height: 400px;
+}
+
+.is-text-principal {
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+}
