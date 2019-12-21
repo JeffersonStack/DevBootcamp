@@ -22,5 +22,23 @@
 // * - zero ou mais ocorrencias do item anterior
 // ^ - inicio de string
 // $ - fim da string
-
+// ?: - somente agrupamento, sem capturar
+// \1 \2 - referencia dentro do regex
 // m - flag m - multiline
+
+// Syntaxe
+
+// Math(regex)
+let name = 'jefferson'.match(/rson/);
+console.log(name);
+
+// replace(regex, string)
+let text = 'Olá Mundo!'.replace(/Mundo/, 'Jefferson');
+console.log(text);
+
+// split(regex)
+let cpf = '111.222.333-44';
+console.log(cpf.split(/\D/));
+
+// search(regex)
+console.log(cpf.search(/\./))
