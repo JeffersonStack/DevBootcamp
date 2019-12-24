@@ -1,7 +1,7 @@
-(function () {
-    'use strict';
-    // setTimeount
-    setTimeout(function () {
-        console.log('Olá Mundo!!')
-    }, 2000);
-})()
+(function() {
+  "use strict";
+  // setTimeount
+  setTimeout(function() {
+    console.log("Olá Mundo!!");
+  }, 3000);
+})();
