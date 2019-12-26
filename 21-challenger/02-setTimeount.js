@@ -3,5 +3,5 @@
   // setTimeount
   setTimeout(function() {
     console.log("Olá Mundo!!");
-  }, 3000);
+  }, 40000);
 })();
