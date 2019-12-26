@@ -16,6 +16,26 @@
     usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
     dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
     */
-    // ?
+    
+    let start = document.querySelector('[data-js="start"]');
+    let stop = document.querySelector('#stop');
+    let reset = document.querySelector('#reset');
+    let cronometro = document.querySelector('#cronometro');
+    let counter = 0;
+
+    start.addEventListener('click', (e) => {
+        e.preventDefault();
+        function timer() {
+            if(counter > 10) {
+                return;
+            }
+    
+            cronometro = setTimeout(timer, 2000);
+        }
+
+        timer();
+    }, false)
+
+    
 
 })(window, document)
