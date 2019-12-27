@@ -1,4 +1,4 @@
-(function(window, document) {
+(function (window, document) {
     'use strict';
     /*
     O desafio de hoje será um pequeno projeto: um cronômetro!
@@ -16,7 +16,7 @@
     usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
     dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
     */
-    
+
     let counter = document.querySelector('[type="text"]');
     let start = document.querySelector('[data-js="start"]');
     let stop = document.querySelector('[data-js="stop"]');
@@ -28,7 +28,7 @@
         counter.value = 0;
         function timer() {
             counter.value++
-            
+
             temporizador = setTimeout(timer, 1000)
         }
 
@@ -43,7 +43,8 @@
     // reset
     reset.addEventListener('click', () => {
         counter.value = 0;
+        clearTimeout(temporizador)
     }, false)
-    
+
 
 })(window, document)

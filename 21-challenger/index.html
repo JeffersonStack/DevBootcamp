@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
-    
-    <input type="text">
 
-    <button data-js="start">Start</button>
-    <button data-js="stop">Stop</button>
-    <button data-js="reset">Reset</button>
+    <style>
+        button {
+            border: none;
+            padding: 1.3rem;
+            color: black;
+        }
+
+        .btn1 {
+            background-color: green;
+        }
+
+        .btn2 {
+            background-color: red;
+        }
+
+        .btn3 {
+            background-color: yellow;
+        }
+
+        input {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" value="0">
+
+    <button data-js="start" class="btn1">Start</button>
+    <button data-js="stop" class="btn2">Stop</button>
+    <button data-js="reset" class="btn3">Reset</button>
 
     <script src="03-atividades.js"></script>
 </body>
+
 </html>
