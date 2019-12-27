@@ -17,25 +17,33 @@
     dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
     */
     
+    let counter = document.querySelector('[type="text"]');
     let start = document.querySelector('[data-js="start"]');
-    let stop = document.querySelector('#stop');
-    let reset = document.querySelector('#reset');
-    let cronometro = document.querySelector('#cronometro');
-    let counter = 0;
+    let stop = document.querySelector('[data-js="stop"]');
+    let reset = document.querySelector('[data-js="reset"]');
+    let temporizador;
 
-    start.addEventListener('click', (e) => {
-        e.preventDefault();
+    // start
+    start.addEventListener('click', () => {
+        counter.value = 0;
         function timer() {
-            if(counter > 10) {
-                return;
-            }
-    
-            cronometro = setTimeout(timer, 2000);
+            counter.value++
+            
+            temporizador = setTimeout(timer, 1000)
         }
 
-        timer();
+        timer()
     }, false)
 
+    // Stop
+    stop.addEventListener('click', () => {
+        clearTimeout(temporizador)
+    }, false)
+
+    // reset
+    reset.addEventListener('click', () => {
+        counter.value = 0;
+    }, false)
     
 
 })(window, document)
