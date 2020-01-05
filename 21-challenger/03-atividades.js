@@ -24,27 +24,25 @@
     let temporizador;
 
     // start
-    start.addEventListener('click', () => {
-        counter.value = 0;
-        function timer() {
-            counter.value++
+    start.addEventListener('click', timer, false)
+    function timer() {
+        counter.value = +counter.value + 1;
 
-            temporizador = setTimeout(timer, 1000)
-        }
-
-        timer()
-    }, false)
+        temporizador = setTimeout(timer, 1000)
+    }
 
     // Stop
-    stop.addEventListener('click', () => {
+    stop.addEventListener('click', stopTimer, false)
+    function stopTimer() {
         clearTimeout(temporizador)
-    }, false)
+    }
 
     // reset
-    reset.addEventListener('click', () => {
+    reset.addEventListener('click', resetTimer, false)
+    function resetTimer() {
         counter.value = 0;
-        clearTimeout(temporizador)
-    }, false)
+        stopTimer()
+    }
 
 
 })(window, document)
