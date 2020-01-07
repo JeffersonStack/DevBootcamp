@@ -23,6 +23,8 @@
 
     /**
      * toString
+     * 
+     * O método toString() retorna uma string representando o código fonte da função.
      */
 
     const arr = [1, 2, 3, 4];
@@ -34,16 +36,31 @@
      * call
      * 
      * O método call() invoca uma função com um dado valor this  e argumentos passados individualmente.
+     * 
+     * fun.call(thisArg[, arg1[, arg2[, ...]]])
      */
 
-    function completeName(name, sobrenome) {
-        this.name = name;
-        this.sobrenome = sobrenome;
-
-        return this;
+    function completeName(a, b, c, d) {
+        console.log(this.firstName, a, b, c, d);
     }
 
-    console.log(completeName()) // Jefferson
-    console.log(completeName.call(this)) // Jefferson
+    const name = {
+        firstName: 'Jefferson'
+    }
 
+    const name2 = {
+        firstName: 'Anderson'
+    }
+
+    completeName.call(name2);
+
+    /**
+     * apply
+     * 
+     * O método apply() chama uma função com um dado valor this e arguments providos como uma array (ou um objeto parecido com um array).
+     * 
+     * fun.apply(thisArg, [argsArray])
+     */
+
+    completeName.apply(name, arr);
 })()
